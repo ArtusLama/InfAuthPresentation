@@ -9,7 +9,6 @@ export default defineNuxtConfig({
         "@nuxt/fonts",
         "@nuxt/icon",
         "@nuxt/image",
-        "@nuxtjs/i18n",
         "@nuxtjs/seo",
         "@nuxtjs/html-validator",
         "@nuxtjs/color-mode",
@@ -20,33 +19,6 @@ export default defineNuxtConfig({
 
     colorMode: {
         classSuffix: "",
-    },
-
-    i18n: {
-        defaultLocale: "en",
-        locales: [
-            {
-                code: "en",
-                language: "en-US",
-                name: "English",
-                file: "en.json",
-            },
-            {
-                code: "de",
-                language: "de-DE",
-                name: "Deutsch",
-                file: "de.json",
-            },
-        ],
-        strategy: "prefix_except_default",
-        detectBrowserLanguage: {
-            useCookie: true,
-            cookieKey: "i18n_redirected",
-            redirectOn: "root",
-        },
-        bundle: {
-            optimizeTranslationDirective: false,
-        },
     },
 
     css: ["~/assets/css/main.css"],
