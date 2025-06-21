@@ -13,18 +13,16 @@
             </UiButton>
         </UiDropdownMenuTrigger>
         <UiDropdownMenuContent>
-            <UiDropdownMenuItem
+            <SwitchLocalePathLink
                 v-for="loc in locales"
                 :key="loc.code"
+                :locale="loc.code"
             >
-                <SwitchLocalePathLink
-                    :locale="loc.code"
-                    class="flex items-center gap-2"
-                >
+                <UiDropdownMenuItem class="flex items-center gap-2">
                     <LanguageSwitchButtonFlag :locale-code="loc.code" />
                     <p>{{ loc.name || loc.code.toUpperCase() }}</p>
-                </SwitchLocalePathLink>
-            </UiDropdownMenuItem>
+                </UiDropdownMenuItem>
+            </SwitchLocalePathLink>
         </UiDropdownMenuContent>
     </UiDropdownMenu>
 </template>
