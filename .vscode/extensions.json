@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "Nuxtr.nuxtr-vscode",
+        "Vue.volar",
+        "hollowtree.vue-snippets",
+        "think2011.vue-i18n",
+        "dbaeumer.vscode-eslint",
+        "antfu.goto-alias",
+        "antfu.iconify",
+        "bradlc.vscode-tailwindcss"
+    ]
+}
