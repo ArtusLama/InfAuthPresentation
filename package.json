@@ -26,9 +26,11 @@
     "@tailwindcss/vite": "^4.1.10",
     "@vueuse/core": "^13.4.0",
     "@vueuse/nuxt": "^13.4.0",
+    "bcryptjs": "^3.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "eslint": "^9.29.0",
+    "jsonwebtoken": "^9.0.2",
     "nuxt": "^3.17.5",
     "nuxt-auth-utils": "^0.5.20",
     "pinia": "^3.0.3",
@@ -44,6 +46,7 @@
   "devDependencies": {
     "@iconify-json/circle-flags": "^1.2.6",
     "@iconify-json/lucide": "^1.2.51",
+    "@types/jsonwebtoken": "^9.0.10",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2"
   },
