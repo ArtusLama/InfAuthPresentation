@@ -15,6 +15,7 @@ export default defineNuxtConfig({
         "@vueuse/nuxt",
         "shadcn-nuxt",
         "vue-sonner/nuxt",
+        "nuxt-auth-utils",
     ],
 
     colorMode: {
