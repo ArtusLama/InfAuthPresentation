@@ -6,9 +6,7 @@ declare module "nuxt/schema" {
 
 declare module "h3" {
     interface H3EventContext {
-        jwt: {
-            authUser: UserData | null
-        }
+        jwtAuthUser: UserData | null
     }
 }
 

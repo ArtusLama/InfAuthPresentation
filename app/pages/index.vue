@@ -15,18 +15,6 @@
                 </h2>
             </AuthTypeSelectCard>
             <AuthTypeSelectCard
-                to="/session-based"
-                aria-label="Session Authentication"
-            >
-                <Icon
-                    name="lucide:database-backup"
-                    class="size-14!"
-                />
-                <h2 class="font-semibold text-xl">
-                    Session Auth
-                </h2>
-            </AuthTypeSelectCard>
-            <AuthTypeSelectCard
                 to="/oauth-based"
                 aria-label="OAuth2 Authentication"
             >

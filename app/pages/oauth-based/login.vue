@@ -8,7 +8,6 @@
                 to="/api/auth/oauth/github"
                 external
                 :class="buttonVariants()"
-                aria-label="Login with GitHub"
             >
                 <Icon
                     name="lucide:github"

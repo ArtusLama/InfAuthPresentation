@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs"
 
 export default function () {
     async function bcryptHashPassword(password: string): Promise<string> {
-        return bcrypt.hash(password, 10)
+        return await bcrypt.hash(password, bcrypt.genSaltSync(10))
     }
 
     return {

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col gap-8 items-center justify-center h-screen">
         <h1 class="text-2xl font-bold">
-            Test
+            OAuth Based Authentication
         </h1>
         <div>
             <NuxtLink

@@ -1,5 +1,5 @@
 export default defineEventHandler(async (event) => {
-    const user = event.context.jwt.authUser
+    const user = event.context.jwtAuthUser
 
     if (user) {
         return {

@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     }
 
     const user = await exampleAccounts().getAccountByEmail(body.email)
-    const validCredentials = exampleAuthCheck().checkCredentials(body.email, body.password)
+    const validCredentials = await exampleAuthCheck().checkCredentials(body.email, body.password)
 
     if (!user || !validCredentials) {
         return sendError(event, createError({
@@ -20,11 +20,13 @@ export default defineEventHandler(async (event) => {
         }))
     }
 
+    const expiresin = 15 // Token expires in 15 seconds
+
     const token = jwt.sign(
         user,
         useRuntimeConfig().jwtSecret,
         {
-            expiresIn: "10s", // Token expires in 10 seconds
+            expiresIn: `${expiresin}s`,
         },
     )
 
@@ -32,8 +34,8 @@ export default defineEventHandler(async (event) => {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "strict",
-        maxAge: 10, // 10 seconds
+        maxAge: expiresin,
     })
 
-    return { message: "Login successful" }
+    return { success: true, message: "You have successfully logged in." }
 })

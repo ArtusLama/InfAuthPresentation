@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
 
     modules: [
+        "@pinia/nuxt",
         "@nuxt/eslint",
         "@nuxt/fonts",
         "@nuxt/icon",
@@ -17,6 +18,10 @@ export default defineNuxtConfig({
         "vue-sonner/nuxt",
         "nuxt-auth-utils",
     ],
+
+    runtimeConfig: {
+        jwtSecret: "", // is replaced by NUXT_JWT_SECRET at build time from .env file
+    },
 
     colorMode: {
         classSuffix: "",

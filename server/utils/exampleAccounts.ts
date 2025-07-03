@@ -13,16 +13,15 @@ export default function () {
     ]
 
     async function getAccountByEmail(email: string): Promise<UserData | undefined> {
-        return (await getRealHashedAccounts()).find(account => account.email === email)
+        const acc: UserData | undefined = plainExampleAccounts.find(acc => acc.email === email)
+        return acc ? await toHashedAccount(acc) : undefined
     }
 
-    async function getRealHashedAccounts(): Promise<UserData[]> {
-        return Promise.all(plainExampleAccounts.map(async (account) => {
-            return {
-                ...account,
-                password: await hashing().bcryptHashPassword(account.password),
-            }
-        }))
+    async function toHashedAccount(acc: UserData): Promise<UserData> {
+        return {
+            ...acc,
+            password: await hashing().bcryptHashPassword(acc.password),
+        }
     }
 
     return {
